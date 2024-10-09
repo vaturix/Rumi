@@ -1,0 +1,105 @@
+{
+  "template": "app",
+  "imports": {
+    "Volo.Abp.LanguageManagement": {
+      "version": "8.3.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.LeptonXTheme": {
+      "version": "3.3.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.OpenIddict.Pro": {
+      "version": "8.3.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.Gdpr": {
+      "version": "8.3.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.AuditLogging.Pro": {
+      "version": "8.3.0",
+      "isInstalled": true
+    },
+    "Volo.Saas": {
+      "version": "8.3.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.Identity.Pro": {
+      "version": "8.3.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.Account.Pro": {
+      "version": "8.3.0",
+      "isInstalled": true
+    }
+  },
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "Rumi.Application": {
+      "path": "src/Rumi.Application/Rumi.Application.abppkg",
+      "folder": "src"
+    },
+    "Rumi.Application.Tests": {
+      "path": "test/Rumi.Application.Tests/Rumi.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "Rumi.Domain.Shared": {
+      "path": "src/Rumi.Domain.Shared/Rumi.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "Rumi.Application.Contracts": {
+      "path": "src/Rumi.Application.Contracts/Rumi.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "Rumi.HttpApi": {
+      "path": "src/Rumi.HttpApi/Rumi.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "Rumi.HttpApi.Client": {
+      "path": "src/Rumi.HttpApi.Client/Rumi.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "Rumi.Web": {
+      "path": "src/Rumi.Web/Rumi.Web.abppkg",
+      "folder": "src"
+    },
+    "Rumi.Web.Tests": {
+      "path": "test/Rumi.Web.Tests/Rumi.Web.Tests.abppkg",
+      "folder": "test"
+    },
+    "Rumi.EntityFrameworkCore.Tests": {
+      "path": "test/Rumi.EntityFrameworkCore.Tests/Rumi.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "Rumi.EntityFrameworkCore": {
+      "path": "src/Rumi.EntityFrameworkCore/Rumi.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "Rumi.TestBase": {
+      "path": "test/Rumi.TestBase/Rumi.TestBase.abppkg",
+      "folder": "test"
+    },
+    "Rumi.Domain.Tests": {
+      "path": "test/Rumi.Domain.Tests/Rumi.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "Rumi.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/Rumi.HttpApi.Client.ConsoleTestApp/Rumi.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    },
+    "Rumi.DbMigrator": {
+      "path": "src/Rumi.DbMigrator/Rumi.DbMigrator.abppkg",
+      "folder": "src"
+    },
+    "Rumi.Domain": {
+      "path": "src/Rumi.Domain/Rumi.Domain.abppkg",
+      "folder": "src"
+    }
+  }
+}

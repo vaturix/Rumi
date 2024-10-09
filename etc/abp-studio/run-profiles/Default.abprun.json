@@ -1,0 +1,13 @@
+﻿{
+  "applications": {
+    "Rumi.Web": {
+      "type": "dotnet-project",
+      "launchUrl": "https://localhost:44391",
+      "path": "../../../src/Rumi.Web/Rumi.Web.csproj",
+      "kubernetesService": ".*-web$",
+      "execution": {
+        "order": 2
+      }
+    }
+  }
+}

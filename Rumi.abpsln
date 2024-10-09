@@ -1,0 +1,42 @@
+{
+  "id": "39b06e57-83b6-4c57-a98d-b108a2c91e4a",
+  "template": "app",
+  "versions": {
+    "LeptonX": "3.3.0",
+    "AbpFramework": "8.3.0",
+    "AbpCommercial": "8.3.0",
+    "AbpStudio": "0.8.3"
+  },
+  "modules": {
+    "Rumi": {
+      "path": "Rumi.abpmdl"
+    }
+  },
+  "runProfiles": {
+    "Default": {
+      "path": "etc/abp-studio/run-profiles/Default.abprun.json"
+    }
+  },
+  "options": {
+    "httpRequests": {
+      "ignoredUrls": [
+        "^/metrics$"
+      ]
+    }
+  },
+  "creatingStudioConfiguration": {
+    "template": "app",
+    "createdAbpStudioVersion": "0.8.3",
+    "tiered": "false",
+    "uiFramework": "mvc",
+    "databaseProvider": "ef",
+    "databaseManagementSystem": "postgresql",
+    "separateTenantSchema": "false",
+    "theme": "leptonx",
+    "themeStyle": "system",
+    "mobileFramework": "none",
+    "publicWebsite": "false",
+    "optionalModules": "GDPR LanguageManagement AuditLogging SaaS OpenIddictAdmin",
+    "socialLogin": ""
+  }
+}
