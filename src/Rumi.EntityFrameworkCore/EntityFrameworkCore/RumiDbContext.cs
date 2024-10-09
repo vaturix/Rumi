@@ -17,6 +17,7 @@ using Volo.Saas.EntityFrameworkCore;
 using Volo.Saas.Editions;
 using Volo.Saas.Tenants;
 using Volo.Abp.Gdpr;
+using Terminology.EntityFrameworkCore;
 
 namespace Rumi.EntityFrameworkCore;
 
@@ -93,5 +94,6 @@ public class RumiDbContext :
         //    b.ConfigureByConvention(); //auto configure for the base class props
         //    //...
         //});
-    }
+        builder.ConfigureTerminology();
+        }
 }

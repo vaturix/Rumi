@@ -1,0 +1,9 @@
+{
+  "id": "886a9651-2b24-4b31-8cf8-0df47b724eec",
+  "template": "empty",
+  "modules": {
+    "Terminology": {
+      "path": "Terminology.abpmdl"
+    }
+  }
+}

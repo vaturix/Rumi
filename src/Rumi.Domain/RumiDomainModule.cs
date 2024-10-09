@@ -20,6 +20,7 @@ using Volo.Abp.Commercial.SuiteTemplates;
 using Volo.Abp.LanguageManagement;
 using Volo.Saas;
 using Volo.Abp.Gdpr;
+using Terminology;
 
 namespace Rumi;
 
@@ -41,7 +42,8 @@ namespace Rumi;
     typeof(AbpGdprDomainModule),
     typeof(BlobStoringDatabaseDomainModule)
     )]
-public class RumiDomainModule : AbpModule
+[DependsOn(typeof(TerminologyDomainModule))]
+    public class RumiDomainModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {

@@ -59,6 +59,7 @@ using Volo.Abp.OpenIddict;
 using Volo.Abp.Security.Claims;
 using Volo.Abp.SettingManagement.Web;
 using Volo.Abp.Studio.Client.AspNetCore;
+using Terminology.Web;
 
 namespace Rumi.Web;
 
@@ -80,7 +81,8 @@ namespace Rumi.Web;
     typeof(AbpSwashbuckleModule),
     typeof(AbpAspNetCoreSerilogModule)
 )]
-public class RumiWebModule : AbpModule
+[DependsOn(typeof(TerminologyWebModule))]
+    public class RumiWebModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {

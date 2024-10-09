@@ -1,0 +1,93 @@
+﻿@page
+@using Microsoft.Extensions.Localization
+@using Terminology.Localization
+@inject IStringLocalizer<TerminologyResource> L
+
+@{
+    ViewData["Title"] = L["Terminoloji"];
+}
+
+<div class="container mt-5">
+    <h1 class="mb-4">@L["Terminoloji"]</h1>
+
+    <!-- Arama Kutusu -->
+    <div class="input-group mb-4">
+        <input type="text" id="searchInput" class="form-control" placeholder="@L["Terim Ara..."]" aria-label="Search Terms">
+        <div class="input-group-append">
+            <button class="btn btn-dark" type="button">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Terim Kartları -->
+    <div id="termsContainer" class="row">
+        <!-- Terim kartları buraya yüklenecek -->
+    </div>
+</div>
+
+@section Scripts {
+        <!-- Gerekli JavaScript dosyaları -->
+        <script src="~/libs/jquery/jquery.min.js"></script>
+        <script src="~/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="~/libs/abp/abp.js"></script>
+        <script src="~/libs/abp/abp.jquery.js"></script>
+        <script src="~/libs/volo/abp.js"></script>
+        <script src="~/libs/volo/abp.ajax.js"></script>
+        <script src="~/libs/volo/abp.modals.js"></script>
+        <script src="~/libs/fontawesome/js/all.min.js"></script>
+
+        <script>
+            $(function () {
+                var allTerms = [];
+
+                function loadTerms() {
+                    abp.ajax({
+                        url: abp.appPath + 'api/terminology/terms',
+                        type: 'GET'
+                    }).done(function (data) {
+                        allTerms = data.items;
+                        displayTerms(allTerms);
+                    }).fail(function (error) {
+                        console.error('API hatası:', error);
+                    });
+                }
+
+                function displayTerms(terms) {
+                    var container = $('#termsContainer');
+                    container.empty();
+
+                    if (terms.length === 0) {
+                        container.append('<p>@L["Terim bulunamadı."]</p>');
+                        return;
+                    }
+
+                    terms.forEach(function (term) {
+                        var cardHtml = `
+                                    <div class=" mb-4">
+                                        <div class="card h-100 shadow-sm">
+                                            <div class="card-body">
+                                                <h5 class="card-title">${term.name}</h5>
+                                                <p class="card-text">${term.description}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+                        container.append(cardHtml);
+                    });
+                }
+
+                $('#searchInput').on('keyup', function () {
+                    var searchText = $(this).val().toLowerCase();
+                    var filteredTerms = allTerms.filter(function (term) {
+                        return term.name.toLowerCase().includes(searchText) ||
+                            term.description.toLowerCase().includes(searchText);
+                    });
+                    displayTerms(filteredTerms);
+                });
+
+                // Sayfa yüklendiğinde terimleri yükle
+                loadTerms();
+            });
+        </script>
+}

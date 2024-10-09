@@ -16,6 +16,7 @@ using Volo.Abp.LanguageManagement;
 using Volo.Saas;
 using Volo.Abp.Gdpr;
 using Volo.Abp.GlobalFeatures;
+using Terminology;
 
 namespace Rumi;
 
@@ -33,7 +34,8 @@ namespace Rumi;
     typeof(AbpGlobalFeaturesModule),
     typeof(BlobStoringDatabaseDomainSharedModule)
     )]
-public class RumiDomainSharedModule : AbpModule
+[DependsOn(typeof(TerminologyDomainSharedModule))]
+    public class RumiDomainSharedModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {

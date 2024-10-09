@@ -1,4 +1,4 @@
-﻿using Volo.Abp.Account;
+using Volo.Abp.Account;
 using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.SettingManagement;
@@ -9,6 +9,7 @@ using Volo.Abp.LanguageManagement;
 using Volo.Saas.Host;
 using Volo.Abp.Gdpr;
 using Volo.Abp.OpenIddict;
+using Terminology;
 
 namespace Rumi;
 
@@ -26,7 +27,8 @@ namespace Rumi;
     typeof(AbpGdprApplicationContractsModule),
     typeof(AbpPermissionManagementApplicationContractsModule)
 )]
-public class RumiApplicationContractsModule : AbpModule
+[DependsOn(typeof(TerminologyApplicationContractsModule))]
+    public class RumiApplicationContractsModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {

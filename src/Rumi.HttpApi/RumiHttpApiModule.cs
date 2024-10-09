@@ -1,4 +1,4 @@
-﻿using Localization.Resources.AbpUi;
+using Localization.Resources.AbpUi;
 using Rumi.Localization;
 using Volo.Abp.Account;
 using Volo.Abp.SettingManagement;
@@ -12,6 +12,7 @@ using Volo.Abp.LanguageManagement;
 using Volo.Saas.Host;
 using Volo.Abp.Gdpr;
 using Volo.Abp.OpenIddict;
+using Terminology;
 
 namespace Rumi;
 
@@ -29,7 +30,8 @@ namespace Rumi;
     typeof(AbpAccountPublicHttpApiModule),
     typeof(AbpFeatureManagementHttpApiModule)
     )]
-public class RumiHttpApiModule : AbpModule
+[DependsOn(typeof(TerminologyHttpApiModule))]
+    public class RumiHttpApiModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {

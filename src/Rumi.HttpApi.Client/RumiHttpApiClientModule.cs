@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Account;
 using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement;
@@ -11,6 +11,7 @@ using Volo.Abp.LanguageManagement;
 using Volo.Saas.Host;
 using Volo.Abp.Gdpr;
 using Volo.Abp.OpenIddict;
+using Terminology;
 
 namespace Rumi;
 
@@ -28,7 +29,8 @@ namespace Rumi;
     typeof(AbpGdprHttpApiClientModule),
     typeof(AbpSettingManagementHttpApiClientModule)
 )]
-public class RumiHttpApiClientModule : AbpModule
+[DependsOn(typeof(TerminologyHttpApiClientModule))]
+    public class RumiHttpApiClientModule : AbpModule
 {
     public const string RemoteServiceName = "Default";
 

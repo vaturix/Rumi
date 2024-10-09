@@ -1,0 +1,62 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "Terminology.Domain.Shared": {
+      "path": "src/Terminology.Domain.Shared/Terminology.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "Terminology.Domain": {
+      "path": "src/Terminology.Domain/Terminology.Domain.abppkg",
+      "folder": "src"
+    },
+    "Terminology.Application.Contracts": {
+      "path": "src/Terminology.Application.Contracts/Terminology.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "Terminology.Application": {
+      "path": "src/Terminology.Application/Terminology.Application.abppkg",
+      "folder": "src"
+    },
+    "Terminology.EntityFrameworkCore": {
+      "path": "src/Terminology.EntityFrameworkCore/Terminology.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "Terminology.HttpApi": {
+      "path": "src/Terminology.HttpApi/Terminology.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "Terminology.HttpApi.Client": {
+      "path": "src/Terminology.HttpApi.Client/Terminology.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "Terminology.TestBase": {
+      "path": "test/Terminology.TestBase/Terminology.TestBase.abppkg",
+      "folder": "test"
+    },
+    "Terminology.EntityFrameworkCore.Tests": {
+      "path": "test/Terminology.EntityFrameworkCore.Tests/Terminology.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "Terminology.Domain.Tests": {
+      "path": "test/Terminology.Domain.Tests/Terminology.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "Terminology.Application.Tests": {
+      "path": "test/Terminology.Application.Tests/Terminology.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "Terminology.Web": {
+      "path": "src/Terminology.Web/Terminology.Web.abppkg",
+      "folder": "src"
+    },
+    "Terminology.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/Terminology.HttpApi.Client.ConsoleTestApp/Terminology.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    }
+  }
+}

@@ -15,6 +15,7 @@ using Volo.Abp.BlobStoring.Database.EntityFrameworkCore;
 using Volo.Abp.LanguageManagement.EntityFrameworkCore;
 using Volo.Saas.EntityFrameworkCore;
 using Volo.Abp.Gdpr;
+using Terminology.EntityFrameworkCore;
 
 namespace Rumi.EntityFrameworkCore;
 
@@ -33,7 +34,8 @@ namespace Rumi.EntityFrameworkCore;
     typeof(AbpGdprEntityFrameworkCoreModule),
     typeof(BlobStoringDatabaseEntityFrameworkCoreModule)
     )]
-public class RumiEntityFrameworkCoreModule : AbpModule
+[DependsOn(typeof(TerminologyEntityFrameworkCoreModule))]
+    public class RumiEntityFrameworkCoreModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {

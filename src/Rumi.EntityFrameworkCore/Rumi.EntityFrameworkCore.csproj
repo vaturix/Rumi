@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <Import Project="..\..\common.props" />
 
@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Rumi.Domain\Rumi.Domain.csproj" />
-  </ItemGroup>
+  <ProjectReference Include="..\..\modules\Terminology\src\Terminology.EntityFrameworkCore\Terminology.EntityFrameworkCore.csproj" /></ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.EntityFrameworkCore.PostgreSql" Version="8.3.0" />
